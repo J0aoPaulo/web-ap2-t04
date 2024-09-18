@@ -49,9 +49,9 @@ const ListarAluno = () => {
     const renderizarAlunos = () => {
         return alunos.map((aluno) => {
             const backgroundColor = flag 
-                ? (Number(aluno.ira) < Number(mediaIra) 
-                    ? "rgba(255, 99, 132, 0.2)"  // Vermelho suave e transparente
-                    : "rgba(54, 162, 235, 0.2)"  // Azul suave e transparente
+                ? (Number(aluno.ira) >= 7 
+                    ? "rgba(54, 162, 235, 0.2)"  // Azul suave e transparente para aprovados
+                    : "rgba(255, 99, 132, 0.2)"  // Vermelho suave e transparente para reprovados
                 ) 
                 : 'transparent';
 
